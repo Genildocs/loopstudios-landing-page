@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import IconHamburguer from '../assets/icon-hamburger.svg';
 import IconClose from '../assets/icon-close.svg';
 import { motion } from 'motion/react';
@@ -29,6 +29,14 @@ export default function Nav({ devices, isOpen, setIsOpen }) {
     active: { opacity: 1, y: 0, visibility: 'visible' },
     inactive: { opacity: 0, y: -20, visibility: 'hidden' },
   };
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
   return (
     <nav>
       {/* Menu mobile */}

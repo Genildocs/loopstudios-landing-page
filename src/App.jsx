@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import SectionInteractive from './components/SectionInteractive';
 import Footer from './components/Footer';
+import SectionCards from './components/SectionCards';
 export default function App() {
   const isSmallDevice = useMediaQuery('only screen and (max-width : 768px)');
   const isMediumDevice = useMediaQuery('only screen and (min-width : 769px) ');
@@ -21,6 +22,7 @@ export default function App() {
         <Nav devices={device} isOpen={isOpen} setIsOpen={setIsOpen} />
       </Header>
       <SectionInteractive />
+      <SectionCards />
       <Footer devices={device} />
     </>
   );
