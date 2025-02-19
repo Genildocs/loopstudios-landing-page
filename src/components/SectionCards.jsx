@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import Image2Mobile from '../assets/mobile/image-deep-earth.jpg';
 import Image2Desktop from '../assets/desktop/image-deep-earth.jpg';
 import Image3Mobile from '../assets/mobile/image-night-arcade.jpg';
@@ -39,31 +40,41 @@ export default function SectionCards({ devices }) {
   ];
   return (
     <section className="px-6 md:px-40 mb-5">
-      <span>Our Creations</span>
+      <span className="text-center ">Our Creations</span>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         {devices.small &&
           cardsImageMobile.map((img, idx) => (
-            <div key={idx}>
+            <motion.div
+              key={idx}
+              className="relative"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+              viewport={{ once: true, amount: 'some' }}>
               <img src={img.src} alt={img.mobile} />
-              <span>
+              <span className="positionNameCards">
                 {img.mobile
                   .replace('image-', '')
                   .replaceAll('-', ' ')
                   .toUpperCase()}
               </span>
-            </div>
+            </motion.div>
           ))}
         {devices.medium &&
           cardsImageDesktop.map((img, idx) => (
-            <div key={idx}>
+            <motion.div
+              key={idx}
+              className="relative"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+              viewport={{ once: true, amount: 'some' }}>
               <img src={img.src} alt={img.desktop} />
-              <span>
+              <span className="positionNameCards">
                 {img.desktop
                   .replace('image-', '')
                   .replaceAll('-', ' ')
                   .toUpperCase()}
               </span>
-            </div>
+            </motion.div>
           ))}
       </div>
       <button>See All</button>
