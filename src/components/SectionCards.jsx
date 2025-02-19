@@ -39,8 +39,12 @@ export default function SectionCards({ devices }) {
     { desktop: 'image-make-it-fisheye', src: Image9Desktop },
   ];
   return (
-    <section className="px-6 md:px-40 mb-5">
-      <span className="text-center ">Our Creations</span>
+    <section className="px-6 md:px-40 mb-5 relative">
+      <div className="flex justify-center md:justify-start mb-5">
+        <span className="text-center text-3xl font-josefin font-light uppercase">
+          Our Creations
+        </span>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         {devices.small &&
           cardsImageMobile.map((img, idx) => (
@@ -77,7 +81,11 @@ export default function SectionCards({ devices }) {
             </motion.div>
           ))}
       </div>
-      <button>See All</button>
+      <div className="flex items-center justify-center mt-5 md:absolute -top-6 right-45">
+        <button className="border-[1px] border-black border-solid px-8 py-2 cursor-pointer hover:bg-black hover:text-white uppercase tracking-[0.2rem] transition-all">
+          See All
+        </button>
+      </div>
     </section>
   );
 }
