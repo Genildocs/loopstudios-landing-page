@@ -22,7 +22,7 @@ export default function App() {
         <Nav devices={device} isOpen={isOpen} setIsOpen={setIsOpen} />
       </Header>
       <SectionInteractive />
-      <SectionCards />
+      <SectionCards devices={device} />
       <Footer devices={device} />
     </>
   );
