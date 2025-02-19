@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageMobile from '/assets/images/mobile/image-interactive.jpg';
-import ImageDesktop from '/assets/images/desktop/image-interactive.jpg';
+import ImageMobile from '../assets/mobile/image-interactive.jpg';
+import ImageDesktop from '../assets/desktop/image-interactive.jpg';
 export default function SectionInteractive() {
   return (
     <section className="px-6 md:px-40 py-20">

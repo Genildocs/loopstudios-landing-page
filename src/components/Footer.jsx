@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '/assets/images/logo.svg';
+import Logo from '../assets/logo.svg';
 export default function Footer({ devices }) {
   const listMenu = ['About', 'Careers', 'Events', 'Products', 'Support'];
   return (
-    <footer className="bg-black p-8 flex flex-col items-center text-white">
+    <footer className="bg-black p-8 flex flex-col md:flex-row items-center text-white">
       <div className="logo relative z-50">
         <img src={Logo} alt="logo" className="w-36 h-6 md:w-48 md:h-8" />
       </div>

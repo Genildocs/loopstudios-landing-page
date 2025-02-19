@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '/assets/images/logo.svg';
+import Logo from '../assets/logo.svg';
 import { motion } from 'motion/react';
 export default ({ children }) => (
   <header
-    className={`relative px-6 md:px-40 pt-10 md:pt-16 min-h-[650px] bg-[url(/assets/images/mobile/image-hero.jpg)] md:bg-[url/assets/images/desktop/image-hero.jpg)] bg-no-repeat bg-cover bg-center `}>
+    className={`relative px-6 md:px-40 pt-10 md:pt-16 min-h-[650px] bg-[url(assets/mobile/image-hero.jpg)] md:bg-[url(assets/desktop/image-hero.jpg)] bg-no-repeat bg-cover bg-center `}>
     <div className="flex items-center justify-between">
       <div className="logo relative z-50">
         <img src={Logo} alt="logo" className="w-36 h-6 md:w-48 md:h-8" />

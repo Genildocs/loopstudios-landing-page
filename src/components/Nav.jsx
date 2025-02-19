@@ -1,7 +1,7 @@
 import React from 'react';
-import IconHamburguer from '/assets/images/icon-hamburger.svg';
-import IconClose from '/assets/images/icon-close.svg';
-import { AnimatePresence, motion } from 'motion/react';
+import IconHamburguer from '../assets/icon-hamburger.svg';
+import IconClose from '../assets/icon-close.svg';
+import { motion } from 'motion/react';
 export default function Nav({ devices, isOpen, setIsOpen }) {
   const listMenu = ['About', 'Careers', 'Events', 'Products', 'Support'];
 
